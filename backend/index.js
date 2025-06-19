@@ -18,13 +18,14 @@ app.use(express.json());
 app.use(cookieParser());
 const corsOption={
      origin: [
+      'http://localhost:3000',
     'https://new-chat-app-lac.vercel.app',
     'https://new-chat-app-lac.vercel.app/'
   ],
   credentials: true,
   optionsSuccessStatus: 200
 };
-app.use(cors()); 
+app.use(cors(corsOption)); 
 
 
 // routes
