@@ -16,10 +16,14 @@ const PORT = process.env.PORT || 5000;
 app.use(express.urlencoded({extended:true}));
 app.use(express.json()); 
 app.use(cookieParser());
-// const corsOption={
-//     origin:'https://new-chat-app-lac.vercel.app/',
-//     credentials:true
-// };
+const corsOption={
+     origin: [
+    'https://new-chat-app-lac.vercel.app',
+    'https://new-chat-app-lac.vercel.app/'
+  ],
+  credentials: true,
+  optionsSuccessStatus: 200
+};
 app.use(cors()); 
 
 
